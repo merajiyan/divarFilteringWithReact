@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Catalog from "./Catalog";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/" component={Catalog} />
+          <Route path="/:field" exact component={Catalog} />
+          <Route path="/:field/:name" exact component={Catalog} />
+          <Route path="/:field/:name/:title" exact component={Catalog} />
+          <Route
+            path="/:field/:name/:title/:fieldOf"
+            exact
+            component={Catalog}
+          />
+          <Route
+            path="/:field/:name/:title/:fieldOf/:date"
+            component={Catalog}
+          />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

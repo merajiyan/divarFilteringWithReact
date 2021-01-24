@@ -1,0 +1,15 @@
+.filter {
+  display: flex;
+  align-items: center;
+  color: #a62626;
+  background-color: #fff;
+  border-radius: 14px;
+  border: 1px solid #a62626;
+  margin-left: 0.75rem;
+  font-size: 0.75rem;
+  height: 1.75rem;
+  outline: none;
+  padding: 0 12px;
+  position: relative;
+  z-index: 1;
+}
